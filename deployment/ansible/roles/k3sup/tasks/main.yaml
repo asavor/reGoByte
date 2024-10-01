@@ -1,0 +1,7 @@
+  - name: Download and install k3sup
+    shell: curl -sLS https://get.k3sup.dev | sh
+    args:
+      executable: /bin/bash
+
+  - name: Verify k3sup installation
+    command: k3sup version

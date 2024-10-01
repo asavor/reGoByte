@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package instagram.v1;
+option go_package = "github.com/Waldo-Card/protos/api/build/go/sync/v1;sync_v1";
+
+
+message GetUserFollowersRequest {
+ string username=1;
+};
+
+message GetUserFollowersResponse{
+
+};
+
+service InstagramService {
+  rpc GetUserFollowers(GetUserFollowersRequest)returns (GetUserFollowersResponse);
+};
+
+
+

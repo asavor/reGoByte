@@ -1,0 +1,22 @@
+# Learn more: https://buf.build/docs/configuration/v2/buf-gen-yaml
+version: v2
+inputs:
+  - directory: .
+
+plugins:
+  # Use protoc-gen-go at v1.31.0
+  - remote: buf.build/protocolbuffers/go:v1.31.0
+    out: build/go
+    opt: paths=source_relative
+  # Use the latest version of protoc-gen-go-grpc
+  - remote: buf.build/grpc/go
+    out: build/go
+    opt: paths=source_relative
+
+  - local: protoc-gen-es
+    opt: target=ts
+    out: build/ts
+
+  - remote: buf.build/grpc/node:v1.12.4
+    out: build/node
+    opt: import_style=typescript,mode=grpc-js

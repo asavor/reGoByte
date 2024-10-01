@@ -1,0 +1,5 @@
+minio:
+  namespaceOverride: minio
+  persistence:
+      enabled: true
+      size: 100Gi

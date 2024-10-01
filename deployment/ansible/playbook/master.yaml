@@ -1,0 +1,6 @@
+- name: Install k3sup and install k3s
+  hosts: master
+  become: true
+  roles:
+    - k3sup
+    - k3s

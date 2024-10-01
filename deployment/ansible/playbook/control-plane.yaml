@@ -1,0 +1,6 @@
+- name: Setup control plane
+  hosts: master
+  become: true
+  roles:
+    - helm
+    - argocd

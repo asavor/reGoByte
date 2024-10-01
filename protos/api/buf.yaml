@@ -1,0 +1,10 @@
+version: v2
+name: buf.build/reGoByte/reGoByte
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
+  ignore:
+    - google/type/datetime.proto

@@ -1,0 +1,7 @@
+[master]
+master ansible_host=192.168.1.238
+
+[master:vars]
+ansible_user=
+ansible_password=
+become=yes
