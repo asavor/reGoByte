@@ -1,7 +1,0 @@
-prometheus:
-  namespaceOverride: monitoring
-  grafana:
-    enabled: true
-    namespaceOverride: monitoring
-
-thanos:

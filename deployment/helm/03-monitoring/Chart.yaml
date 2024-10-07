@@ -12,6 +12,22 @@ dependencies:
     version: 15.7.25
     repository: https://charts.bitnami.com/bitnami
 
+  - name: opentelemetry-collector
+    version: 0.107.0
+    repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+
+#  - name: loki
+#    version: 6.16.0
+#    repository: https://grafana.github.io/helm-charts
+
+  - name: tempo
+    version: 1.10.3
+    repository: https://grafana.github.io/helm-charts
+
+#  - name: fluent-bit
+#    version: 0.47.10
+#    repository: https://fluent.github.io/helm-charts
+
 # A chart can be either an 'application' or a 'library' chart.
 # Application charts are a collection of templates that can be packaged into versioned archives
 # to be deployed.

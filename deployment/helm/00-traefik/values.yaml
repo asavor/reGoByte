@@ -1,3 +1,24 @@
 traefik:
   deployment:
     replicas: 3
+
+  additionalArguments:
+    - "tracing.openTelemetry.grpc=true"
+
+  tracing:
+    serviceName: traefik
+    spanNameLimit: 0
+    openTelemetry:
+      grpc: true
+      insecure: true
+      address: otel-collector.monitoring.svc.cluster.local:4317
+
+  providers:
+    kubernetesIngress: { }
+
+
+  metrics:
+    prometheus:
+      service:
+        enabled: true
+

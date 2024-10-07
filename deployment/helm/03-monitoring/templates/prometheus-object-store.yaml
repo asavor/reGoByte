@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: prometheus-object-store-config
+  namespace: monitoring
+stringData:
+  s3Config: |
+    type: s3
+    config:
+      bucket: prometheus-metrics
+      endpoint: minio.minio.svc.cluster.local:9000
+      access_key: Jw2CuqP17zVehC2WLi6g
+      secret_key: XpL2d8ANKNxkkukacaERWutNgaC1Gn8l8L9js6it
+      insecure: true
